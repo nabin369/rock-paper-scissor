@@ -17,7 +17,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('rock');
         player2.picks('scissors');
-        expect(game.winner()).toBe(player1);
+        expect(game.winner()).toBe('rock smashes scissors');
 
       });
 
@@ -25,7 +25,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('rock');
         player2.picks('paper');
-        expect(game.winner()).toBe(player2);
+        expect(game.winner()).toBe('paper covers rock');
 
       });
 
@@ -37,7 +37,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('paper');
         player2.picks('rock');
-        expect(game.winner()).toBe(player1);
+        expect(game.winner()).toBe('paper covers rock');
 
       });
 
@@ -45,7 +45,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('paper');
         player2.picks('scissors');
-        expect(game.winner()).toBe(player2);
+        expect(game.winner()).toBe('scissors cuts paper');
 
       });
 
@@ -57,7 +57,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('scissors');
         player2.picks('paper');
-        expect(game.winner()).toBe(player1);
+        expect(game.winner()).toBe('scissors cuts paper');
 
       });
 
@@ -65,7 +65,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('scissors');
         player2.picks('rock');
-        expect(game.winner()).toBe(player2);
+        expect(game.winner()).toBe('rock smashes scissors');
 
       });
 
@@ -85,7 +85,7 @@ describe("Rock-Paper-Scissors", function() {
           return game.winner();
         });
 
-        expect(drawGameResults).toEqual([null, null, null]);
+        expect(drawGameResults).toEqual(['Draw', 'Draw', 'Draw']);
 
       });
 
